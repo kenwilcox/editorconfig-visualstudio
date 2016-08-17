@@ -42,6 +42,7 @@ namespace EditorConfig.VisualStudio.Logic.Settings
 
             if (path.StartsWith("http:", StringComparison.OrdinalIgnoreCase)
                 || path.Equals("Temp.txt")
+                || path != System.IO.Path.GetFullPath(path))
                 return;
 
             try
